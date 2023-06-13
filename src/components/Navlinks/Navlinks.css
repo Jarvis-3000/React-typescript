@@ -1,0 +1,33 @@
+.navlinks {
+  width: 200px;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.navlinks-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navlinks a {
+  width: 180px;
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #333;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#navlinks a:hover {
+  background-color: #c0c0c0;
+}
+
+#navlinks a.active {
+  background-color: #bf99ff;
+  color: black;
+}

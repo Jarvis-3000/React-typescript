@@ -1,0 +1,14 @@
+.home {
+  width: 100%;
+  text-align: center;
+  min-width: 300px;
+  max-width: 600px;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    max-width: 100%;
+  }
+}
