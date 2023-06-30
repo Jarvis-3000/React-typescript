@@ -3,25 +3,37 @@ import "./Home.css";
 import TodoForm from "../../components/TodoForm/TodoForm1";
 import TodoList from "../../components/TodoList/TodoList1";
 
+import { useAppDispatch, RootState } from "../../store/store";
+import {
+  addTodo,
+  deleteAllTodos,
+  removeTodo,
+} from "../../store/Todos/todosSlice";
+
 interface Todo {
   id: number;
   name: string;
 }
 
+const getUniqueId = (): number => {
+  const date = new Date();
+  const timestamp = date.getTime();
+
+  return timestamp;
+};
+
 const Home: React.FC = () => {
-  const [todos, setTodos] = useState<Todo[]>([]);
   const [editMode, setEditMode] = useState(false);
   const [currentTodo, setCurrentTodo] = useState<Todo | undefined>(undefined);
 
   const handleAddTodo = (name: any) => {
     try {
-      const id = name.id.value;
-
       const newTodo: Todo = {
-        id: id,
+        id: getUniqueId(),
         name,
       };
-      setTodos([...todos, newTodo]);
+
+      
     } catch (err) {
       console.log(err);
       alert(err);
