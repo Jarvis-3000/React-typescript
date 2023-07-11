@@ -1,3 +1,4 @@
-[submodule "src/git-submodules"]
-	path = src/git-submodules
+[submodule "src/submodules"]
+	path = src/submodules
 	url = https://github.com/Jarvis-3000/git-submodules.git
+	branch = main
