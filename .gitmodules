@@ -2,3 +2,5 @@
 	path = src/submodules
 	url = https://github.com/Jarvis-3000/git-submodules.git
 	branch = main
+[submodule "https://github.com/Jarvis-3000/git-submodules/tree/main"]
+	branch = main
